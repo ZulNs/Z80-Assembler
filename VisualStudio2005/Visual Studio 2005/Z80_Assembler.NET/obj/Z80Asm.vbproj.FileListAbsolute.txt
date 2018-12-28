@@ -1,0 +1,9 @@
+C:\TEMP\z80-assembler\Z80_Assembler.NET\bin\Z80_Assembler.exe
+C:\TEMP\z80-assembler\Z80_Assembler.NET\bin\Z80_Assembler.xml
+C:\TEMP\z80-assembler\Z80_Assembler.NET\obj\Release\ResolveAssemblyReference.cache
+C:\TEMP\z80-assembler\Z80_Assembler.NET\obj\Release\Z80_Assembler.frmDlgFileOpen.resources
+C:\TEMP\z80-assembler\Z80_Assembler.NET\obj\Release\Z80Asm.vbproj.GenerateResource.Cache
+C:\TEMP\z80-assembler\Z80_Assembler.NET\obj\Release\Z80_Assembler.exe
+C:\TEMP\z80-assembler\Z80_Assembler.NET\obj\Release\Z80_Assembler.xml
+D:\DEVELOPMENT\VisualBasic\Z80_assembler\assembler\Visual Studio 2005\Z80_Assembler.NET\obj\Release\Z80_Assembler.exe
+D:\DEVELOPMENT\VisualBasic\Z80_assembler\assembler\Visual Studio 2005\Z80_Assembler.NET\obj\Release\Z80_Assembler.xml
