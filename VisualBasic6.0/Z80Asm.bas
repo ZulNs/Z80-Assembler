@@ -144,7 +144,9 @@ Private Function InitVars()
         "RES", "RET", "RETI", "RETN", "RL", "RLA", "RLC", "RLCA", "RLD", "RR", "RRA", _
         "RRC", "RRCA", "RRD", "RST", "SBC", "SCF", "SET", "SLA", "SRA", "SRL", "SUB", _
         "XOR")
-    RegsList = Array("A", "B", "C", "D", "E", "H", "L", "AF", "AF'", "BC", "DE", "HL", _
+    ' ZulNs: RegsList = Array("A", "B", "C", "D", "E", "H", "L", "AF", "AF'", "BC", "DE", "HL", _
+    ' ZulNs:    "IX", "IY", "SP")
+    RegsList = Array("A", "B", "C", "D", "E", "H", "L", "I", "R", "AF", "AF'", "BC", "DE", "HL", _
         "IX", "IY", "SP")
     RefRegsList = Array("C", "BC", "DE", "HL", "IX", "IY", "SP")
     FlagIdsList = Array("Z", "NZ", "C", "NC", "P", "M", "PO", "PE")
@@ -429,6 +431,7 @@ Private Function InitVars()
     Print #1, "LD,A,H,7C"
     Print #1, "LD,A,I,ED57"
     Print #1, "LD,A,L,7D"
+    Print #1, "LD,A,R,ED5F"
     Print #1, "LD,A,n8,3En8"
     Print #1, "LD,B,(HL),46"
     Print #1, "LD,B,(IX+d7),DD46d7"
@@ -507,6 +510,7 @@ Private Function InitVars()
     Print #1, "LD,L,H,6C"
     Print #1, "LD,L,L,6D"
     Print #1, "LD,L,n8,2En8"
+    Print #1, "LD,R,A,ED4F"
     Print #1, "LD,SP,(n16),ED7BnLnH"
     Print #1, "LD,SP,HL,F9"
     Print #1, "LD,SP,IX,DDF9"
@@ -1621,7 +1625,8 @@ Private Function GetMnemonic() As Boolean
                     GoTo FailGetMnemonic
                 End If
                 If ArgType = cFlagId Then
-                    If Tmp(2) <> "CALL" And Tmp(2) <> "JP" And Tmp(2) <> "JR" Then
+                    ' ZulNs: If Tmp(2) <> "CALL" And Tmp(2) <> "JP" And Tmp(2) <> "JR" Then
+		    If Tmp(2) <> "CALL" And Tmp(2) <> "JP" And Tmp(2) <> "JR" And Tmp(2) <> "RET" Then
                         ErrDesc = "Invalid use of flag identifier"
                         GoTo FailGetMnemonic
                     Else
